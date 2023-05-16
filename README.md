@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# **Post-Records Storefront**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Post-Records is a fictional e-commerce storefront with a comically narrow product line of rare and out-of-print post-punk records. It is a project page built to showcase Gian Carlos' skillset as a front-end web developer.
 
-## Available Scripts
 
-In the project directory, you can run:
+### **Features and Objectives**
+---
 
-### `npm start`
+- Communicate with the back-end to access inventory data.
+- Utilize back-end data in combination with front-end design to create a positive online retail experience.
+- Collection feature which allows users to catalog their personal collections.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Tech**
+---
 
-### `npm test`
+- HTML
+- CSS
+- JavaScript
+- React
+- React Router DOM
+- JSON
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### **Instructions**
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Run npm start for the front-end.
+- Run json-server -p 3001 db.json for the back-end.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### **Github**
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- https://github.com/giantcarlos/post-records-storefront
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Demo Video**
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- https://youtu.be/D04XhApmUg8
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Project Blog**
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- https://medium.com/@giantainocarlos/post-punk-records-and-living-in-a-react-state-usestate-for-dummies-91b351fdb556
