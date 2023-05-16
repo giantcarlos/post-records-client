@@ -1,13 +1,264 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', 'Open Sans', sans-serif;
+  color: #222
+}
+
+nav {
+  font-size: 1.2rem;
+  background-color: #111;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2.3rem;
+}
+
+nav .site-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0.4rem;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+nav .active {
+  background-color: #333;
+}
+
+nav .loginBtn {
+  border: none;
+  font-size: 1.2rem;
+  background-color: #111;
+  color: #eee;
+  cursor: pointer;
+  position:absolute;
+  right: 2rem;
+}
+
+img.bg-image {
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  position: relative;
+}
+
+.container .text {
+  margin-right: 4rem;
+  margin-top: 6rem;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: white;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: right;
+  list-style: none;
+  opacity: .5;
+
+}
+
+.card-grid {
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.card {
+  max-width: 400px;
+  padding: 1rem;
+  text-align: center;
+  background: white;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 2);
+}
+
+.card-image {
+  overflow: hidden;
+}
+
+.card-image > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  transition: 200ms transform ease-in-out;
+}
+
+.card:hover > .card-image > img {
+  transform: scale(1.025);
+}
+
+.card-album {
+  margin-top: .6rem;
+  font-size: 1.1rem;
+  margin-bottom: .25rem;
+}
+
+.card-details {
+  font-size: 1rem;
+  margin-bottom: .2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.collection-header {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.collection-login {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 8.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.record-container {
+  max-width: 900px;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.record-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.record-image {
+  float: right;
+}
+
+.record-image > img {
+  max-width: 475px;
+  max-height: auto;
+}
+
+.record-details {
+  font-size: 1.2rem;
+  margin-top: 8.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.record-detail {
+  font-size: .9rem;
+  margin-top: 1.8rem;
+  line-height: 1;
+}
+
+.record-login {
+  margin-top: 4.75rem;
+  color: red;
+  font-size: 1rem;
+}
+
+.btn {
+  background: #111;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: .5em 5.5em;
+  border-radius: .25em;
+  cursor: pointer;
+  margin-top: 3.5rem;
+}
+
+.btn:hover, .btn:focus {
+  background: #333;
+}
+
+.about {
+  text-align: left;
+  line-height: 1.75;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.formLinkBtn {
+  background: white;
+  font-size: 1.1rem;
+  border-radius: .25em;
+  border-color: #777;
+  cursor: pointer;
+  position: absolute;
+  right: 3rem;
+  padding: .2rem;
+}
+
+.formLinkBtn:hover, .formLinkBtn:focus {
+  background: #222;
+  color: #eee
+}
+
+.collectionForm {
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  padding: 1rem;
+  text-align: center;
+  background: white;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 2);
+}
+
+.formText {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2.25rem;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.formBtn {
+  margin-top: 2rem;
+  max-width: 125px;
+  padding: .225rem;
+  background-color: white;
+}
+
+.formBtn:hover, .formBtn:focus {
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+}
+
+input {
+  font-size: 1rem;
+  color: inherit;
+  width: 100%;
+  padding: .4rem 5px;
+  margin: .4rem 0;
 }
