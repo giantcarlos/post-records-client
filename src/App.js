@@ -20,6 +20,12 @@ const App = () => {
         .then(data => setRecords(data))
     }, [])
 
+    useEffect(() => {
+      fetch("https://post-records-server.onrender.com/collection")
+      .then(res => res.json())
+      .then(data => setCollection(data))
+   }, [])
+
    const handleLogin = () => {
     login === false ? setLogin(true) : setLogin(false);
    }
@@ -35,7 +41,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/shop" element={<Shop records={records} />} />
-        <Route exact path="/collection" element={<Collection collection={collection} setCollection={setCollection} login={login}/>} />
+        <Route exact path="/collection" element={<Collection collection={collection} login={login}/>} />
         <Route exact path="/shop/:id" element={<Record addtoCollection={addToCollection} login={login} />} />
         <Route exact path="/collection/:id" element={<RecordCollected />} />
        </Routes>

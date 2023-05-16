@@ -1,16 +1,10 @@
 import React, { useEffect } from 'react';
 import CardCollected from './CardCollected';
 
-const Collection = ({ login, collection, setCollection }) => {
+const Collection = ({ login, collection }) => {
     const cards = () => collection.map(record => {
             return <CardCollected key={record.id} id={record.id} record={record} />
         })
-
-        useEffect(() => {
-            fetch("https://post-records-server.onrender.com/collection")
-            .then(res => res.json())
-            .then(data => setCollection(data))
-         }, [])
 
     return login ? (
         <div>
