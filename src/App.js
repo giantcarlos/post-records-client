@@ -39,7 +39,6 @@ const App = () => {
         <Route exact path="/collection" element={<Collection collection={collection} setCollection={setCollection} login={login}/>} />
         <Route exact path="/shop/:id" element={<Record addtoCollection={addToCollection} login={login} />} />
         <Route exact path="/collection/:id" element={<RecordCollected />} />
-        <Route exact path="/collectionform" element={<CollectionForm collection={collection} setCollection={setCollection} addtoCollection={addToCollection} />} />
        </Routes>
     </div>
   )
