@@ -15,12 +15,12 @@ const Collection = ({ login, collection, setCollection }) => {
     return login ? (
         <div>
             <div className="collection-header">
-                {collection.length} records in your collection.
+                You have {collection.length} total records purchased.
             </div>
             <div className="card-grid">{cards()}</div>
         </div>
     ) : (
-        <div className="collection-login">Please login to view your collection.</div>
+        <div className="collection-login">Please login to view your purchase history.</div>
     )
 }
 
