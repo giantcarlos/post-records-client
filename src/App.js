@@ -7,7 +7,6 @@ import Collection from './components/Collection';
 import Record from './components/Record';
 import RecordCollected from './components/RecordCollected';
 import Navigation from './components/Navigation';
-import CollectionForm from './components/CollectionForm';
 
 
 const App = () => {
