@@ -34,7 +34,7 @@ const RecordCollected = () => {
                 <p>Catalog Number: {catalog}</p>
             </div>
             <Link to={"/collection"}>
-                    <button className="btn" onClick={handleDelete}>Delete From Collection</button>
+                    <button className="btn" onClick={handleDelete}>Sell Record</button>
             </Link> 
         </div>
     )
