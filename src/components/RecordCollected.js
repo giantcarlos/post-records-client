@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState, useContext } from 'react';
+import { UserContext } from './Context'
+import { useParams, Link } from 'react-router-dom';
 
 const RecordCollected = () => {
+    const {setCollection, collection} = useContext(UserContext)
     const [record, setRecord] = useState({});
     const { id } = useParams();
     const { album, artist, comment, released, label, catalog, price, image } = record;
@@ -11,6 +13,10 @@ const RecordCollected = () => {
         .then(res => res.json())
         .then(data => setRecord(data))
     }, [id])
+
+    const handleDelete = (id) => {
+        setCollection(collection.filter(record => record.id !=id));
+        }
 
     return (
         <div className="record-container">
@@ -27,6 +33,9 @@ const RecordCollected = () => {
                 <p>Record Label: {label}</p>
                 <p>Catalog Number: {catalog}</p>
             </div>
+            <Link to={"/collection"}>
+                    <button className="btn" onClick={handleDelete}>Sell Record</button>
+            </Link> 
         </div>
     )
 }

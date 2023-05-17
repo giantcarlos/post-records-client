@@ -3,7 +3,7 @@ import { UserContext } from './Context'
 import { useParams, Link } from 'react-router-dom';
 
 const Record = () => {
-    const {addToCollection, login} = useContext(UserContext)
+    const {collection, setCollection, login} = useContext(UserContext)
     const [record, setRecord] = useState({});
     const { id } = useParams();
     const { album, artist, comment, released, label, catalog, price, image } = record
@@ -14,8 +14,8 @@ const Record = () => {
         .then(data => setRecord(data))
     }, [id])
 
-    const handlePurchase = (newRecord) => {
-       addToCollection(newRecord)
+    const handlePurchase = (record) => {
+        setCollection(collection => [...collection, record])
     }
 
     return (

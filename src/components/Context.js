@@ -23,13 +23,8 @@ function UserProvider({ children }) {
     login === false ? setLogin(true) : setLogin(false);
    }
 
-   const addToCollection = (newRecord) => {
-    setCollection(collection => [...collection, newRecord])
-   }
-
-
 return (
-    <UserContext.Provider value={{ login, setLogin, handleLogin, records, setRecords, collection, setCollection, addToCollection  }}>
+    <UserContext.Provider value={{ login, setLogin, handleLogin, records, setRecords, collection, setCollection }}>
         {children}
     </UserContext.Provider>
 )
