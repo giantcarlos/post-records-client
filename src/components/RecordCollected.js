@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-const RecordCollected = ({ record }) => {
+const RecordCollected = () => {
+    const [record, setRecord] = useState({});
     const { id } = useParams();
     const { album, artist, comment, released, label, catalog, price, image } = record;
     
+    useEffect(() => {
+        fetch(`https://post-records-server.onrender.com/collection/${id}`)
+        .then(res => res.json())
+        .then(data => setRecord(data))
+    }, [id])
 
     const handleDelete = () => {
         fetch(`https://post-records-server.onrender.com/collection/${id}`, {
