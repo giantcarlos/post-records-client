@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { UserProvider } from "./components/Context";
 import Home from './components/Home';
 import About from './components/About';
 import Shop from './components/Shop';
@@ -10,41 +11,20 @@ import Navigation from './components/Navigation';
 
 
 const App = () => {
-  const [login, setLogin] = useState(false);
-  const [records, setRecords] = useState([]);
-  const [collection, setCollection] = useState([]);
-
-    useEffect(() => {
-        fetch("https://post-records-server.onrender.com/records")
-        .then(res => res.json())
-        .then(data => setRecords(data))
-    }, [])
-
-    useEffect(() => {
-      fetch("https://post-records-server.onrender.com/collection")
-      .then(res => res.json())
-      .then(data => setCollection(data))
-   }, [])
-
-   const handleLogin = () => {
-    login === false ? setLogin(true) : setLogin(false);
-   }
-
-   const addToCollection = (newRecord) => {
-    setCollection(collection => [...collection, newRecord])
-   }
 
   return (
     <div className = "App">
-      <Navigation login={login} handleLogin={handleLogin}/>
-       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/shop" element={<Shop records={records} />} />
-        <Route exact path="/collection" element={<Collection collection={collection} login={login}/>} />
-        <Route exact path="/shop/:id" element={<Record addtoCollection={addToCollection} login={login} />} />
-        <Route exact path="/collection/:id" element={<RecordCollected />} />
-       </Routes>
+      <UserProvider>
+        <Navigation />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/shop" element={<Shop />} />
+          <Route exact path="/collection" element={<Collection />} />
+          <Route exact path="/shop/:id" element={<Record />} />
+          <Route exact path="/collection/:id" element={<RecordCollected />} />
+        </Routes>
+      </UserProvider>
     </div>
   )
 }

@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { UserContext } from './Context'
 import { useParams, Link } from 'react-router-dom';
 
-const Record = ({ addToCollection, login }) => {
+const Record = () => {
+    const {addToCollection, login} = useContext(UserContext)
     const [record, setRecord] = useState({});
     const { id } = useParams();
     const { album, artist, comment, released, label, catalog, price, image } = record
@@ -12,17 +14,8 @@ const Record = ({ addToCollection, login }) => {
         .then(data => setRecord(data))
     }, [id])
 
-    const handlePurchase = () => {
-        fetch('https://post-records-server.onrender.com/collection',{
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                Accept: 'application/json'
-            },
-            body: JSON.stringify(record)
-            })
-            .then(res => res.json())
-            .then(() => addToCollection)
+    const handlePurchase = (newRecord) => {
+       addToCollection(newRecord)
     }
 
     return (

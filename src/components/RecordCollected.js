@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const RecordCollected = () => {
     const [record, setRecord] = useState({});
@@ -11,12 +11,6 @@ const RecordCollected = () => {
         .then(res => res.json())
         .then(data => setRecord(data))
     }, [id])
-
-    const handleDelete = () => {
-        fetch(`https://post-records-server.onrender.com/collection/${id}`, {
-            method: "DELETE"
-        })
-    }
 
     return (
         <div className="record-container">
@@ -33,9 +27,6 @@ const RecordCollected = () => {
                 <p>Record Label: {label}</p>
                 <p>Catalog Number: {catalog}</p>
             </div>
-            <Link to={"/collection"}>
-                    <button className="btn" onClick={handleDelete}>Sell Record</button>
-            </Link> 
         </div>
     )
 }

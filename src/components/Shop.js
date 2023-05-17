@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react'
+import { UserContext } from './Context'
 import Card from './Card';
 
-const Shop = ({ records }) => {
+const Shop = () => {
+    const {records} = useContext(UserContext)
 
     const cards = () => records.map(record => {
             return <Card key={record.id} id={record.id} record={record} />

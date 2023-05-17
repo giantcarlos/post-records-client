@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from 'react'
+import { UserContext } from './Context'
 import { NavLink } from "react-router-dom";
 
 
-function Navigation({ login, handleLogin }) {
+function Navigation() {
+  const {login, handleLogin} = useContext(UserContext)
   return (
     <nav>
         <div className="site-title">POST-RECORDS</div>

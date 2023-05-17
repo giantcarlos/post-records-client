@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react'
+import { UserContext } from './Context'
 import CardCollected from './CardCollected';
 
-const Collection = ({ login, collection }) => {
+const Collection = () => {
+    const {login, collection} = useContext(UserContext)
     const cards = () => collection.map(record => {
             return <CardCollected key={record.id} id={record.id} record={record} />
         })
