@@ -37,13 +37,7 @@ Post-Records is a fictional e-commerce storefront with a comically narrow produc
 
 - Run npm start for the front-end.
 - Run json-server -p 3001 db.json for the back-end.
-
-
-### **Sample Account Login**
----
-
-- Username: gian
-- Password: 1234
+- To login with a sample full account use username gian and password 1234.
 
 
 ### **Project Blog**
