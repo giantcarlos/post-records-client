@@ -20,14 +20,6 @@ Post-Records is a fictional e-commerce storefront with a comically narrow produc
 - React Router DOM
 - JSON
 
-
-### **Live Link **
----
-
-- https://post-records-client.onrender.com/
-
-
-
 ### **Github**
 ---
 
